@@ -17,4 +17,14 @@ public class LevelManager : MonoBehaviour
         gameMenu.SetActive(false) ;
         Time.timeScale = 1f ;
     }
+
+    public void About()
+    {
+        // About the game
+    }
+
+    public void Exit()
+    {
+        Application.Quit() ;
+    }
 }

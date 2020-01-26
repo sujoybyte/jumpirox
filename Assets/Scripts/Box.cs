@@ -17,10 +17,11 @@ public class Box : MonoBehaviour
         // chechking for objects with tag 'Bar' and 'Hero'
         if (other.gameObject.tag == "Bar" || other.gameObject.tag == "Hero")
         {
-            // removing the box object
-            Destroy(this.gameObject) ;
             // set the collided object's color to the color of the box
             other.gameObject.GetComponent<SpriteRenderer>().color = boxColor ;
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false ;
+            // removing the box object
+            Destroy(this.gameObject) ;
         }
     }
 }

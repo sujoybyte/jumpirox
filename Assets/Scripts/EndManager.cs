@@ -12,6 +12,7 @@ public class EndManager : MonoBehaviour
     {
         if (other.gameObject == hero)
         {
+            // Restart game - restart scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex) ;
         }
     }

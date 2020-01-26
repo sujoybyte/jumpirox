@@ -7,6 +7,8 @@ TagManager:
   - Bar
   - Hero
   - Menu
+  - Score
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Bar
   - Hero
   - Hero Front
-  - 
+  - BarFront
   - 
   - 
   - 
@@ -47,9 +49,12 @@ TagManager:
   - name: Bar
     uniqueID: 1102970177
     locked: 0
+  - name: Hero
+    uniqueID: 2363580469
+    locked: 0
   - name: Hero Front
     uniqueID: 1342156793
     locked: 0
-  - name: Hero
-    uniqueID: 2363580469
+  - name: BarFront
+    uniqueID: 2691792823
     locked: 0

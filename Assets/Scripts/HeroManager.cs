@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI ;
+using UnityEngine.SceneManagement ;
 
-public class Hero : MonoBehaviour
+public class HeroManager : MonoBehaviour
 {
     Rigidbody2D heroRigidbody2d ;
     public float moveSpeed = 150f ;
+    public Color heroColor ;
+    GameObject score ;
 
     void Awake()
     {
         // set the Hero's Rigidbody2D component
         heroRigidbody2d = transform.GetComponent<Rigidbody2D>() ;
+        score = GameObject.FindGameObjectWithTag("Score") ;
     }
 
     void Update()
@@ -42,5 +47,37 @@ public class Hero : MonoBehaviour
             if (tapPosition.x < 0 && tapPosition.y < 0)
                 heroRigidbody2d.velocity = new Vector2(-1.0f, 1.0f) * Time.deltaTime * moveSpeed ;
         }
+    }
+
+    void OnCollisionExit2D(Collision2D other) {
+        if (other.gameObject.tag == "Box")
+        {
+            if (!other.gameObject.GetComponent<SpriteRenderer>().enabled)
+                ScoreChange(1) ;
+        }
+        if (other.gameObject.tag == "Bar")
+        {
+            if (this.gameObject.GetComponent<SpriteRenderer>().color == other.gameObject.GetComponent<SpriteRenderer>().color)
+            {
+                
+                if (this.gameObject.GetComponent<SpriteRenderer>().color != Color.black)
+                {
+                    this.gameObject.GetComponent<SpriteRenderer>().color = Color.black ;
+                    other.gameObject.GetComponent<SpriteRenderer>().color = Color.black ;
+                    ScoreChange(3) ;
+                }
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex) ;
+            }
+        }
+    }
+
+    public void ScoreChange(int add)
+    {
+        string scoreText = score.GetComponent<Text>().text ;
+        score.GetComponent<Text>().text = System.Convert.ToString(int.Parse(scoreText) + add) ;
+        Debug.Log(score.GetComponent<Text>().text) ;
     }
 }

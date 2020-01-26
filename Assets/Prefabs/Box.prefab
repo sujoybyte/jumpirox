@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3086675539843271558}
   - component: {fileID: 3086675539843271553}
   - component: {fileID: 3086675539843271552}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Box
-  m_TagString: Bar
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6ef4993bc9751e647a6cc7bf30a2a181, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,7 +98,7 @@ Rigidbody2D:
   m_Mass: 0.3
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.3
+  m_GravityScale: 0.2
   m_Material: {fileID: 6200000, guid: 88dbcbf61b42589428cc110be20be2a1, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -142,3 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b40057fdee68443af5ddbd89874286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  absorbAnimation: {fileID: 0}

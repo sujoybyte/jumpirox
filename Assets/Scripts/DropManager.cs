@@ -20,6 +20,8 @@ public class DropManager : MonoBehaviour
     // how a box drops from screen top
     void DropMethod()
     {
+        
+
         // generate random colored boxes at random positions
         GameObject dropCopy = Instantiate(drop, new Vector2(bars[Random.Range(1, 6)].position.x, dropStart.position.y), Quaternion.identity) ;
         // changing the color of drop copy to a random color

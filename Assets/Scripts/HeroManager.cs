@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement ;
 public class HeroManager : MonoBehaviour
 {
     Rigidbody2D heroRigidbody2d ;
+    public SpriteRenderer heroEye ;
+    public SpriteRenderer heroTop ;
+    //bool isFliped = false ;
     public float moveSpeed = 150f ;
     public Color heroColor ;
     GameObject score ;
@@ -30,9 +33,17 @@ public class HeroManager : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal") ;
         // if presses the left or right arrow keys
         if (Input.GetKeyDown("left") || Input.GetKeyDown("right"))
+        {
+            if (Input.GetKeyDown("left"))
+                FlipHero(true) ;
+            if (Input.GetKeyDown("right"))
+                FlipHero(false) ;
             heroRigidbody2d.velocity = new Vector2(moveInput, Mathf.Abs(moveInput)) * Time.deltaTime * moveSpeed ;
+        }
         if (Input.GetKey("left") || Input.GetKey("right"))
+        {
             heroRigidbody2d.velocity = new Vector2(moveInput / 2, Mathf.Abs(moveInput) / 2) * Time.deltaTime * moveSpeed ;
+        }
         
         // TOUCH CONTROL
         if (Input.touchCount > 0)
@@ -47,6 +58,12 @@ public class HeroManager : MonoBehaviour
             if (tapPosition.x < 0 && tapPosition.y < 0)
                 heroRigidbody2d.velocity = new Vector2(-1.0f, 1.0f) * Time.deltaTime * moveSpeed ;
         }
+    }
+
+    void FlipHero(bool value)
+    {
+        heroEye.flipX = value ;
+        heroTop.flipX = value ;
     }
 
     void OnCollisionExit2D(Collision2D other) {

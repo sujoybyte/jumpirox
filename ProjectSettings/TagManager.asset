@@ -22,8 +22,8 @@ TagManager:
   - Hero
   - Hero Front
   - BarFront
-  - 
-  - 
+  - HeroTop
+  - HeroEye
   - 
   - 
   - 
@@ -51,6 +51,12 @@ TagManager:
     locked: 0
   - name: Hero
     uniqueID: 2363580469
+    locked: 0
+  - name: PlayerEye
+    uniqueID: 2634102813
+    locked: 0
+  - name: HeroTop
+    uniqueID: 2974628673
     locked: 0
   - name: Hero Front
     uniqueID: 1342156793

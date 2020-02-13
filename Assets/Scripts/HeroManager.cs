@@ -9,9 +9,7 @@ public class HeroManager : MonoBehaviour
     Rigidbody2D heroRigidbody2d ;
     public SpriteRenderer heroEye ;
     public SpriteRenderer heroTop ;
-    //bool isFliped = false ;
     public float moveSpeed = 150f ;
-    public Color heroColor ;
     GameObject score ;
 
     void Awake()
@@ -59,42 +57,52 @@ public class HeroManager : MonoBehaviour
                 heroRigidbody2d.velocity = new Vector2(-1.0f, 1.0f) * Time.deltaTime * moveSpeed ;
         }
     }
-
+    // flipping the hero
     void FlipHero(bool value)
     {
+        // flipping hero eye top gear
         heroEye.flipX = value ;
         heroTop.flipX = value ;
     }
 
-    void OnCollisionExit2D(Collision2D other) {
-        if (other.gameObject.tag == "Box")
+    void OnCollisionExit2D(Collision2D collided) {
+        // checking for the object box
+        if (collided.gameObject.tag == "Box")
         {
-            if (!other.gameObject.GetComponent<SpriteRenderer>().enabled)
+            // checking if the sprite renderer component is inactive and increase the score
+            if (!collided.gameObject.GetComponent<SpriteRenderer>().enabled)
                 ScoreChange(1) ;
         }
-        if (other.gameObject.tag == "Bar")
+        // checking for the object bar
+        if (collided.gameObject.tag == "Bar")
         {
-            if (this.gameObject.GetComponent<SpriteRenderer>().color == other.gameObject.GetComponent<SpriteRenderer>().color)
+            Color heroColor = this.gameObject.GetComponent<SpriteRenderer>().color ;
+            Color collidedColor = collided.gameObject.GetComponent<SpriteRenderer>().color ;
+            // checking if hero collided with an object of same color
+            if (heroColor == collidedColor)
             {
-                
-                if (this.gameObject.GetComponent<SpriteRenderer>().color != Color.black)
+                // checking if hero color is not black
+                if (heroColor != Color.black)
                 {
-                    this.gameObject.GetComponent<SpriteRenderer>().color = Color.black ;
-                    other.gameObject.GetComponent<SpriteRenderer>().color = Color.black ;
-                    ScoreChange(3) ;
+                    // making hero and it's collided object black
+                    heroColor = Color.black ;
+                    collidedColor = Color.black ;
+                    // increase score with bonus score
+                    ScoreChange(5) ;
                 }
             }
             else
             {
+                // restarting level
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex) ;
             }
         }
     }
-
+    // changing the score
     public void ScoreChange(int add)
     {
+        // converting the score value and calculte
         string scoreText = score.GetComponent<Text>().text ;
         score.GetComponent<Text>().text = System.Convert.ToString(int.Parse(scoreText) + add) ;
-        Debug.Log(score.GetComponent<Text>().text) ;
     }
 }

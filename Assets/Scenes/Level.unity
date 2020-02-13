@@ -1893,7 +1893,7 @@ MonoBehaviour:
   heroEye: {fileID: 1228173259}
   heroTop: {fileID: 1377371722}
   moveSpeed: 130
-  heroColor: {r: 0.8666667, g: 0.8666667, b: 0.8666667, a: 1}
+  heroColor: {r: 0.9056604, g: 0.09825563, b: 0.09825563, a: 1}
 --- !u!58 &1175262465
 CircleCollider2D:
   m_ObjectHideFlags: 0

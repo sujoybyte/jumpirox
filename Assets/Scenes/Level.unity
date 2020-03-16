@@ -1721,7 +1721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.23529412}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.23529412}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1893,7 +1893,6 @@ MonoBehaviour:
   heroEye: {fileID: 1228173259}
   heroTop: {fileID: 1377371722}
   moveSpeed: 130
-  heroColor: {r: 0.9056604, g: 0.09825563, b: 0.09825563, a: 1}
 --- !u!58 &1175262465
 CircleCollider2D:
   m_ObjectHideFlags: 0

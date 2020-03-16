@@ -85,8 +85,8 @@ public class HeroManager : MonoBehaviour
                 if (heroColor != Color.black)
                 {
                     // making hero and it's collided object black
-                    heroColor = Color.black ;
-                    collidedColor = Color.black ;
+                    this.gameObject.GetComponent<SpriteRenderer>().color = Color.black ;
+                    collided.gameObject.GetComponent<SpriteRenderer>().color = Color.black ;
                     // increase score with bonus score
                     ScoreChange(5) ;
                 }

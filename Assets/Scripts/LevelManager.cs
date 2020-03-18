@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public GameObject gameMenu ;
-    
+
     void Start()
     {
         if (gameMenu.activeSelf)
@@ -28,3 +28,4 @@ public class LevelManager : MonoBehaviour
         Application.Quit() ;
     }
 }
+

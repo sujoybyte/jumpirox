@@ -9,7 +9,7 @@ public class Box : MonoBehaviour
     void Start()
     {
         // set the color of the created box
-        boxColor = GetComponent<SpriteRenderer>().color ;
+        boxColor = GetComponent<SpriteRenderer>().color;
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -18,10 +18,12 @@ public class Box : MonoBehaviour
         if (other.gameObject.tag == "Bar" || other.gameObject.tag == "Hero")
         {
             // set the collided object's color to the color of the box
-            other.gameObject.GetComponent<SpriteRenderer>().color = boxColor ;
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = false ;
+            other.gameObject.GetComponent<SpriteRenderer>().color = boxColor;
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
             // removing the box object
-            Destroy(this.gameObject) ;
+            Destroy(this.gameObject);
         }
     }
 }
+

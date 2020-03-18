@@ -41,8 +41,8 @@ public class HeroManager : MonoBehaviour
         if (Input.GetKey("left") || Input.GetKey("right"))
         {
             heroRigidbody2d.velocity = new Vector2(moveInput / 2, Mathf.Abs(moveInput) / 2) * Time.deltaTime * moveSpeed ;
-        }
-        
+        } 
+
         // TOUCH CONTROL
         if (Input.touchCount > 0)
         {
@@ -57,6 +57,7 @@ public class HeroManager : MonoBehaviour
                 heroRigidbody2d.velocity = new Vector2(-1.0f, 1.0f) * Time.deltaTime * moveSpeed ;
         }
     }
+
     // flipping the hero
     void FlipHero(bool value)
     {
@@ -65,7 +66,8 @@ public class HeroManager : MonoBehaviour
         heroTop.flipX = value ;
     }
 
-    void OnCollisionExit2D(Collision2D collided) {
+    void OnCollisionExit2D(Collision2D collided) 
+    {
         // checking for the object box
         if (collided.gameObject.tag == "Box")
         {
@@ -98,6 +100,7 @@ public class HeroManager : MonoBehaviour
             }
         }
     }
+
     // changing the score
     public void ScoreChange(int add)
     {
@@ -106,3 +109,4 @@ public class HeroManager : MonoBehaviour
         score.GetComponent<Text>().text = System.Convert.ToString(int.Parse(scoreText) + add) ;
     }
 }
+

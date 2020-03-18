@@ -8,7 +8,7 @@ public class EndManager : MonoBehaviour
     public GameObject hero ;
     public Transform endStart ;
 
-    void OnTriggerEnter2D(Collider2D other) 
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == hero)
         {
@@ -17,3 +17,4 @@ public class EndManager : MonoBehaviour
         }
     }
 }
+

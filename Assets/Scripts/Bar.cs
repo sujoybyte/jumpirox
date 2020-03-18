@@ -26,7 +26,6 @@ public class Bar : MonoBehaviour
     {
         // the position at which the Bar gets bounced back
         barEndPosition.y = barStartPosition.y + screenSize.y / 16 ;
-
         // checking for if the Bar goes up
         if (isGoingUp)
             transform.Translate(new Vector2(0, 1) * Time.deltaTime * speed) ;
@@ -40,3 +39,4 @@ public class Bar : MonoBehaviour
             isGoingUp = true ;
     }
 }
+

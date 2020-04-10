@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public GameObject gameMenu ;
+    public GameObject gameMenu;
 
-    void Start()
+    private void Start()
     {
         if (gameMenu.activeSelf)
-            Time.timeScale = 0f ;
+            Time.timeScale = 0f;
     }
 
     public void Play()
     {
-        gameMenu.SetActive(false) ;
-        Time.timeScale = 1f ;
+        gameMenu.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void Settings()
+    {
+        // Settings
     }
 
     public void About()
@@ -25,7 +30,7 @@ public class LevelManager : MonoBehaviour
 
     public void Exit()
     {
-        Application.Quit() ;
+        Application.Quit();
     }
 }
 

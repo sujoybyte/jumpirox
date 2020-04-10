@@ -1,19 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement ;
+using UnityEngine.SceneManagement;
 
 public class EndManager : MonoBehaviour
 {
-    public GameObject hero ;
-    public Transform endStart ;
+    [SerializeField] private GameObject hero = null;
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == hero)
         {
             // Restart game - restart scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex) ;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

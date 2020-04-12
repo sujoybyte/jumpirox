@@ -9,6 +9,9 @@ TagManager:
   - Menu
   - Score
   - Box
+  - Drop Line
+  - Dead Line
+  - Wall
   layers:
   - Default
   - TransparentFX

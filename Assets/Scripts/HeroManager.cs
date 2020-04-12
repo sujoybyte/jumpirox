@@ -100,6 +100,15 @@ public class HeroManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Dead Line")
+        {
+            // Restart game - restart scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
     // changing the score
     private void ScoreChange(int add)
     {

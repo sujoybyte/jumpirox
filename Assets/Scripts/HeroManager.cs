@@ -9,13 +9,12 @@ public class HeroManager : MonoBehaviour
     private Rigidbody2D heroRigidbody2d;
     [SerializeField] private SpriteRenderer heroEye = null, heroTop = null;
     [SerializeField] private float moveSpeed = 150f;
-    private GameObject score;
+    [SerializeField] private GameObject score = null;
 
     private void Awake()
     {
         // set the Hero's Rigidbody2D component
         heroRigidbody2d = transform.GetComponent<Rigidbody2D>();
-        score = GameObject.FindGameObjectWithTag("Score");
     }
 
     private void Update()

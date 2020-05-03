@@ -1134,7 +1134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395871dfaea723c42ac1313fa9c12847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMenu: {fileID: 0}
+  menuUIObject: {fileID: 0}
+  gameUIObject: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1676,7 +1677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395871dfaea723c42ac1313fa9c12847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMenu: {fileID: 1036157412}
+  menuUIObject: {fileID: 176712762}
+  gameUIObject: {fileID: 1036157412}
 --- !u!1 &1175262459
 GameObject:
   m_ObjectHideFlags: 0

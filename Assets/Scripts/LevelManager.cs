@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public GameObject gameMenu;
+    [SerializeField] private GameObject menuUIObject = null;
+    [SerializeField] private GameObject gameUIObject = null;
 
     private void Start()
     {
-        if (gameMenu.activeSelf)
-            Time.timeScale = 0f;
+        if (menuUIObject.activeSelf) Time.timeScale = 0f;
     }
 
     public void Play()
     {
-        gameMenu.SetActive(false);
+        menuUIObject.SetActive(false);
+        gameUIObject.SetActive(true);
         Time.timeScale = 1f;
     }
 

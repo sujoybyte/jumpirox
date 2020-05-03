@@ -19,7 +19,7 @@ public class Box : MonoBehaviour
         {
             // set the collided object's color to the color of the box
             other.gameObject.GetComponent<SpriteRenderer>().color = boxColor;
-            GetComponent<SpriteRenderer>().enabled = false;  // box gameobject connected to this script
+            GetComponent<SpriteRenderer>().enabled = false;
 
             // removing the box object
             Destroy(gameObject);

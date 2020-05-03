@@ -91,17 +91,13 @@ public class HeroManager : MonoBehaviour
                     ScoreChange(5);
                 }
             }
-            else
-            {
-                // restarting level
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
+            else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Dead Line")
+        if (other.gameObject.CompareTag("Dead Line"))
         {
             // Restart game - restart scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

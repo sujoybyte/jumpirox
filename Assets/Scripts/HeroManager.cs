@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class HeroManager : MonoBehaviour
 {
     private Rigidbody2D heroRigidbody2d;
     [SerializeField] private SpriteRenderer heroEye = null, heroTop = null;
     [SerializeField] private float moveSpeed = 150f;
-    [SerializeField] private GameObject score = null;
+    [SerializeField] private TextMeshProUGUI score = null;
 
     private void Awake()
     {
@@ -105,11 +106,10 @@ public class HeroManager : MonoBehaviour
     }
 
     // changing the score
-    private void ScoreChange(int add)
+    private void ScoreChange(int point)
     {
         // converting the score value and calculte
-        string scoreText = score.GetComponent<Text>().text;
-        score.GetComponent<Text>().text = System.Convert.ToString(int.Parse(scoreText) + add);
+        score.text = System.Convert.ToString(int.Parse(score.text) + point);
     }
 }
 

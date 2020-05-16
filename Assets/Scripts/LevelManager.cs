@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private GameObject menuUIObject = null;
     [SerializeField] private GameObject gameUIObject = null;
+    [SerializeField] private GameObject buttonBox = null;
+    [SerializeField] private GameObject settingsButton = null, aboutButton = null, exitButton = null;
 
     private void Start()
     {
@@ -21,17 +24,51 @@ public class LevelManager : MonoBehaviour
 
     public void Settings()
     {
-        // Settings
+        if (buttonBox.activeSelf)
+        {
+            buttonBox.SetActive(false);
+            aboutButton.SetActive(true);
+            exitButton.SetActive(true);
+        }
+        else if (!buttonBox.activeSelf)
+        {
+            buttonBox.SetActive(true);
+            aboutButton.SetActive(false);
+            exitButton.SetActive(false);
+        }
     }
 
     public void About()
     {
-        // About the game
+        if (buttonBox.activeSelf)
+        {
+            buttonBox.SetActive(false);
+            settingsButton.SetActive(true);
+            exitButton.SetActive(true);
+        }
+        else if (!buttonBox.activeSelf)
+        {
+            buttonBox.SetActive(true);
+            settingsButton.SetActive(false);
+            exitButton.SetActive(false);
+        }
     }
 
     public void Exit()
     {
-        Application.Quit();
+        //Application.Quit();
+        if (buttonBox.activeSelf)
+        {
+            buttonBox.SetActive(false);
+            settingsButton.SetActive(true);
+            aboutButton.SetActive(true);
+        }
+        else if (!buttonBox.activeSelf)
+        {
+            buttonBox.SetActive(true);
+            settingsButton.SetActive(false);
+            aboutButton.SetActive(false);
+        }
     }
 }
 

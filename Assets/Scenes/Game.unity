@@ -472,7 +472,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 1
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 31
+  m_AdditionalShaderChannelsFlag: 7
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
@@ -868,6 +868,7 @@ GameObject:
   - component: {fileID: 334179860}
   - component: {fileID: 334179859}
   - component: {fileID: 334179858}
+  - component: {fileID: 334179861}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -984,6 +985,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334179856}
   m_CullTransparentMesh: 0
+--- !u!95 &334179861
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334179856}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fe7179455b34bf44aa36317a50f63ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &349293429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,6 +2261,7 @@ GameObject:
   - component: {fileID: 1387066146}
   - component: {fileID: 1387066145}
   - component: {fileID: 1387066144}
+  - component: {fileID: 1387066147}
   m_Layer: 5
   m_Name: About
   m_TagString: Untagged
@@ -2357,6 +2378,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387066142}
   m_CullTransparentMesh: 0
+--- !u!95 &1387066147
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387066142}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fe7179455b34bf44aa36317a50f63ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1418393476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,6 +2667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1552568215}
+  - component: {fileID: 1552568216}
   m_Layer: 5
   m_Name: PopBox
   m_TagString: Untagged
@@ -2643,7 +2684,7 @@ RectTransform:
   m_GameObject: {fileID: 1552568214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 158361696}
   m_Father: {fileID: 1418393477}
@@ -2654,6 +2695,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 454}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1552568216
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552568214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 46101d012ac8e7448b0421a7d83c3ee5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1610213336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,6 +2911,7 @@ GameObject:
   - component: {fileID: 1920238638}
   - component: {fileID: 1920238637}
   - component: {fileID: 1920238636}
+  - component: {fileID: 1920238639}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -2967,6 +3028,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920238634}
   m_CullTransparentMesh: 0
+--- !u!95 &1920238639
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920238634}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fe7179455b34bf44aa36317a50f63ba, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1971564656
 GameObject:
   m_ObjectHideFlags: 0
